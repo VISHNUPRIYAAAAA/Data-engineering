@@ -1,6 +1,6 @@
-import pandas as pd
+import pandas as pd                                                      #Imports the pandas library, which is used for data manipulation and analysis with a aliasing name 'pd'.
 
-df = pd.read_csv('/content/sample_data/california_housing_test.csv')
-df = df.dropna()
-df['latitude'] = df['latitude'].astype(float)
-df.to_csv('/content/output.csv', index=False)
+df = pd.read_csv('/content/sample_data/california_housing_test.csv')     #reades the csv file from the location 
+df = df.dropna()                                                         # Removes rows that contain missing (NULL / NaN) values
+df['latitude'] = df['latitude'].astype(float)                            #select the latitude column and converts its datatype into float and updates the dataframe
+df.to_csv('/content/output.csv', index=False)                            # Writes the DataFrame to a new CSV file.Saves it at /content/output.csv. index=False prevents pandas from writing row numbers as a column.

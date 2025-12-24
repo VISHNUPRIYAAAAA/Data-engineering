@@ -1,0 +1,6 @@
+import pandas as pd
+
+df = pd.read_csv('/content/sample_data/california_housing_test.csv')
+df = df.dropna()
+df['latitude'] = df['latitude'].astype(float)
+df.to_csv('/content/output.csv', index=False)
